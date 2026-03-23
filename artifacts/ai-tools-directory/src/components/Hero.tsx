@@ -10,7 +10,7 @@ export function Hero({ searchQuery, setSearchQuery }: HeroProps) {
   const title = t('hero.title').split('\n');
 
   return (
-    <div style={{ paddingBottom: '50px', background: 'linear-gradient(135deg,rgba(139,92,246,.1),rgba(16,185,129,.05))' }}>
+    <div style={{ paddingBottom: '50px', background: 'linear-gradient(135deg,rgba(139,92,246,.1),rgba(16,185,129,.05))', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={{ fontSize: 'clamp(2.5rem,5vw,4.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1rem', color: '#f0f4ff' }}>
         {title.map((line, i) => <span key={i}>{line}{i < title.length - 1 && <br />}</span>)}
       </h1>
@@ -27,7 +27,7 @@ export function Hero({ searchQuery, setSearchQuery }: HeroProps) {
       >
         {t('hero.cta')}
       </a>
-      <div style={{ position: 'relative', maxWidth: 560 }}>
+      <div style={{ position: 'relative', width: '100%', maxWidth: 560 }}>
         <svg style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: '#b8bfd9', width: 18, height: 18 }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input
           type="text"

@@ -16,11 +16,12 @@ export function Navbar() {
   });
 
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
-      <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#8b5cf6' }}>
+    <nav style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', marginBottom: '2rem' }}>
+      <div />
+      <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#8b5cf6', textAlign: 'center' }}>
         {t('nav.logo')}
       </div>
-      <div style={{ display: 'flex', gap: '8px' }}>
+      <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
         <button onClick={() => setLanguage('es')} style={btnStyle(language === 'es')}>ES</button>
         <button onClick={() => setLanguage('en')} style={btnStyle(language === 'en')}>EN</button>
       </div>
