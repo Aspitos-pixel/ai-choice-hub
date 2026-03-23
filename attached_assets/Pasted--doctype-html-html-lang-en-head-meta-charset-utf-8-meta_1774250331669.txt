@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Choice Hub | Best AI Tools for Every Task 2026</title>
+<meta name="description" content="Discover the best AI tools for writing, coding, images, video, design, voice & automation. Direct links to official sites with comparisons.">
+<meta name="keywords" content="best AI tools 2026, AI for writing, AI coding, AI image generator">
+<link rel="canonical" href="https://yourdomain.com/">
+
+<style>
+:root{--bg:#0a0f23;--panel:#111b35;--text:#f0f4ff;--accent:#8b5cf6;--green:#10b981;--maxw:1200px;--radius:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(135deg,#0a0f23 0%,#1a1b41 100%);color:var(--text);line-height:1.6}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header{padding:80px 0 50px;background:linear-gradient(135deg,rgba(139,92,246,.1),rgba(16,185,129,.05))}
+header nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:2rem}
+.logo{font-size:1.8rem;font-weight:800;color:var(--accent)}
+.lang-switch a{padding:8px 16px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:25px;color:var(--text);text-decoration:none;font-size:14px}
+.lang-switch a.active{background:var(--accent);color:white}
+h1{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:1rem}
+.subtitle{font-size:1.3rem;color:#b8bfd9;margin-bottom:2rem;max-width:600px}
+.cta{display:inline-block;padding:16px 32px;background:var(--accent);color:white;border-radius:50px;font-weight:700;text-decoration:none;font-size:1.1rem;box-shadow:0 10px 30px rgba(139,92,246,.3)}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));margin:4rem 0}
+.card{background:linear-gradient(145deg,rgba(17,27,53,.95),rgba(10,15,35,.95));border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(0,0,0,.3)}
+.card h3{font-size:1.4rem;margin:.5rem 0 1rem;color:white}
+.card p{color:#b8bfd9;margin-bottom:1.5rem}
+.btn-link{display:inline-flex;align-items:center;gap:.5rem;padding:12px 20px;background:var(--green);color:#011e0d;border-radius:12px;text-decoration:none;font-weight:600}
+.table-container{overflow-x:auto;margin:3rem 0;border-radius:var(--radius);background:rgba(17,27,53,.8);border:1px solid rgba(255,255,255,.1)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:1rem 1.5rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+th{background:rgba(139,92,246,.2);color:white;font-weight:600}
+footer{padding:3rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;color:#b8bfd9}
+@media(max-width:768px){.container{padding:0 15px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo">🤖 AI Choice Hub</div>
+<div class="lang-switch">
+<a href="/es/" class="lang-es">ES</a>
+<a href="/" class="active lang-en">EN</a>
+</div>
+</nav>
+<h1>Best AI Tools<br>for Every Task</h1>
+<p class="subtitle">Find the perfect AI for writing, coding, images, video, design, voice & automation. Direct links to official sites with expert comparisons.</p>
+<a href="#tools" class="cta">Explore All Tools</a>
+</div>
+</header>
+
+<main class="container">
+<section id="tools">
+<h2 style="font-size:2.2rem;margin:3rem 0 2rem;text-align:center">AI Tools by Category</h2>
+<div class="grid">
+<div class="card">
+<span style="display:inline-block;background:rgba(16,185,129,.2);color:var(--green);padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Writing & Chat</span>
+<h3>ChatGPT</h3>
+<p>Best for versatile writing, brainstorming, code assistance and content creation.</p>
+<a href="https://chatgpt.com/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try ChatGPT</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(16,185,129,.2);color:var(--green);padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Writing & Chat</span>
+<h3>Claude</h3>
+<p>Perfect for long-form writing, analysis and complex reasoning tasks.</p>
+<a href="https://claude.ai/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Claude</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(16,185,129,.2);color:var(--green);padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Coding</span>
+<h3>GitHub Copilot</h3>
+<p>Best AI coding assistant integrated in your IDE for real-time code completion.</p>
+<a href="https://github.com/features/copilot" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Copilot</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(59,130,246,.2);color:#3b82f6;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Images</span>
+<h3>Midjourney</h3>
+<p>Leading AI for artistic images, concepts and creative visuals.</p>
+<a href="https://www.midjourney.com/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Midjourney</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(59,130,246,.2);color:#3b82f6;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Images</span>
+<h3>DALL-E 3</h3>
+<p>Excellent for precise image generation from detailed text prompts.</p>
+<a href="https://openai.com/dall-e-3" class="btn-link" target="_blank" rel="noopener nofollow">→ Try DALL-E</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(245,158,11,.2);color:#d97706;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Video</span>
+<h3>Synthesia</h3>
+<p>Create professional avatar videos from text in 120+ languages.</p>
+<a href="https://www.synthesia.io/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Synthesia</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(245,158,11,.2);color:#d97706;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Design</span>
+<h3>Canva Magic Studio</h3>
+<p>AI-powered design tools for presentations, social media and marketing.</p>
+<a href="https://www.canva.com/magic/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Canva</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(139,92,246,.2);color:var(--accent);padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Voice</span>
+<h3>ElevenLabs</h3>
+<p>Most realistic AI voice generation for voiceovers and dubbing.</p>
+<a href="https://elevenlabs.io/" class="btn-link" target="_blank" rel="noopener nofollow">→ Try ElevenLabs</a>
+</div>
+
+<div class="card">
+<span style="display:inline-block;background:rgba(16,185,129,.2);color:var(--green);padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:1rem">Automation</span>
+<h3>Zapier AI</h3>
+<p>AI-powered no-code automation connecting 6000+ apps.</p>
+<a href="https://zapier.com/ai" class="btn-link" target="_blank" rel="noopener nofollow">→ Try Zapier</a>
+</div>
+</div>
+</section>
+
+<section class="table-container">
+<h2 style="text-align:center;margin:2rem 0 1rem;font-size:1.8rem">Quick Comparison</h2>
+<table>
+<thead>
+<tr><th>Task</th><th>Best Choice</th><th>Alternative</th><th>Pro Option</th></tr>
+</thead>
+<tbody>
+<tr><td>Writing</td><td>ChatGPT</td><td>Claude</td><td>Gemini</td></tr>
+<tr><td>Coding</td><td>Copilot</td><td>ChatGPT</td><td>Cursor</td></tr>
+<tr><td>Images</td><td>Midjourney</td><td>DALL-E</td><td>Firefly</td></tr>
+<tr><td>Video</td><td>Synthesia</td><td>Runway</td><td>Pika</td></tr>
+<tr><td>Design</td><td>Canva</td><td>Figma AI</td><td>Adobe Express</td></tr>
+<tr><td>Voice</td><td>ElevenLabs</td><td>Murf</td><td>Respeecher</td></tr>
+</tbody>
+</table>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<p>&copy; 2026 AI Choice Hub. Curated by AI experts for AI users.</p>
+<nav style="margin-top:1rem">
+<a href="/privacy.html" style="color:#b8bfd9;margin:0 1rem;text-decoration:none">Privacy</a>
+<a href="/legal.html" style="color:#b8bfd9;margin:0 1rem;text-decoration:none">Legal</a>
+<a href="/contact.html" style="color:#b8bfd9;margin:0 1rem;text-decoration:none">Contact</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

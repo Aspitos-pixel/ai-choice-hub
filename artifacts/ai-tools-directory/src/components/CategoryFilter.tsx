@@ -1,66 +1,41 @@
-import { CATEGORIES, CategoryId } from "@/data/tools";
-import { useLanguage } from "@/context/LanguageContext";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { CATEGORIES, CategoryId } from '@/data/tools';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface CategoryFilterProps {
-  selectedCategory: CategoryId | "all";
-  setSelectedCategory: (c: CategoryId | "all") => void;
+  selectedCategory: CategoryId | 'all';
+  setSelectedCategory: (c: CategoryId | 'all') => void;
 }
 
 export function CategoryFilter({ selectedCategory, setSelectedCategory }: CategoryFilterProps) {
   const { t } = useLanguage();
 
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-2 mb-12 px-4 max-w-5xl mx-auto">
-      <button
-        onClick={() => setSelectedCategory("all")}
-        className={cn(
-          "px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 relative",
-          selectedCategory === "all" 
-            ? "text-primary-foreground shadow-lg shadow-primary/25" 
-            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-        )}
-      >
-        {selectedCategory === "all" && (
-          <motion.div 
-            layoutId="activeCategory" 
-            className="absolute inset-0 bg-primary rounded-xl -z-10" 
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          />
-        )}
-        <span className="relative z-10">{t("filter.all")}</span>
-      </button>
+  const pillStyle = (active: boolean): React.CSSProperties => ({
+    padding: '8px 20px',
+    borderRadius: 50,
+    border: active ? '1px solid #8b5cf6' : '1px solid rgba(255,255,255,.12)',
+    background: active ? '#8b5cf6' : 'rgba(255,255,255,.05)',
+    color: active ? 'white' : '#b8bfd9',
+    fontWeight: 600,
+    fontSize: '.9rem',
+    cursor: 'pointer',
+    transition: 'all 0.2s',
+    whiteSpace: 'nowrap' as const,
+  });
 
-      {CATEGORIES.map((cat) => {
-        const Icon = cat.icon;
-        const isSelected = selectedCategory === cat.id;
-        
-        return (
-          <button
-            key={cat.id}
-            onClick={() => setSelectedCategory(cat.id)}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 relative",
-              isSelected 
-                ? "text-primary-foreground shadow-lg shadow-primary/25" 
-                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            )}
-          >
-            {isSelected && (
-              <motion.div 
-                layoutId="activeCategory" 
-                className="absolute inset-0 bg-primary rounded-xl -z-10" 
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10 flex items-center gap-2">
-              <Icon className="w-4 h-4" />
-              {t(`cat.${cat.id}`)}
-            </span>
-          </button>
-        );
-      })}
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: '2.5rem' }}>
+      <button style={pillStyle(selectedCategory === 'all')} onClick={() => setSelectedCategory('all')}>
+        {t('filter.all')}
+      </button>
+      {CATEGORIES.map(cat => (
+        <button
+          key={cat.id}
+          style={pillStyle(selectedCategory === cat.id)}
+          onClick={() => setSelectedCategory(cat.id)}
+        >
+          {t(cat.labelKey)}
+        </button>
+      ))}
     </div>
   );
 }

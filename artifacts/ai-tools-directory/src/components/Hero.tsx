@@ -1,6 +1,4 @@
-import { Search } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
-import { motion } from "framer-motion";
+import { useLanguage } from '@/context/LanguageContext';
 
 interface HeroProps {
   searchQuery: string;
@@ -9,55 +7,41 @@ interface HeroProps {
 
 export function Hero({ searchQuery, setSearchQuery }: HeroProps) {
   const { t } = useLanguage();
+  const title = t('hero.title').split('\n');
 
   return (
-    <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col items-center text-center px-4">
-      {/* Background Image & Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <img 
-          src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
-          alt="Abstract Background"
-          className="w-full h-full object-cover opacity-90 dark:opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto"
+    <div style={{ paddingBottom: '50px', background: 'linear-gradient(135deg,rgba(139,92,246,.1),rgba(16,185,129,.05))' }}>
+      <h1 style={{ fontSize: 'clamp(2.5rem,5vw,4.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1rem', color: '#f0f4ff' }}>
+        {title.map((line, i) => <span key={i}>{line}{i < title.length - 1 && <br />}</span>)}
+      </h1>
+      <p style={{ fontSize: '1.2rem', color: '#b8bfd9', marginBottom: '2rem', maxWidth: 580 }}>
+        {t('hero.subtitle')}
+      </p>
+      <a
+        href="#tools"
+        style={{
+          display: 'inline-block', padding: '16px 32px', background: '#8b5cf6',
+          color: 'white', borderRadius: '50px', fontWeight: 700, textDecoration: 'none',
+          fontSize: '1.1rem', boxShadow: '0 10px 30px rgba(139,92,246,.3)', marginBottom: '2.5rem'
+        }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          {t("hero.badge")}
-        </div>
-
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground drop-shadow-sm">
-          {t("hero.title")}
-        </h1>
-        
-        <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-          {t("hero.subtitle")}
-        </p>
-
-        <div className="relative max-w-xl mx-auto group">
-          <div className="absolute inset-0 bg-primary/20 blur-xl rounded-2xl group-focus-within:bg-primary/30 transition-all duration-500" />
-          <div className="relative flex items-center bg-background rounded-2xl border-2 border-border group-focus-within:border-primary/50 shadow-lg overflow-hidden transition-all duration-300">
-            <Search className="w-6 h-6 ml-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t("search.placeholder")}
-              className="w-full bg-transparent px-4 py-4 outline-none text-foreground placeholder:text-muted-foreground font-medium"
-            />
-          </div>
-        </div>
-      </motion.div>
+        {t('hero.cta')}
+      </a>
+      <div style={{ position: 'relative', maxWidth: 560 }}>
+        <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: '#b8bfd9', fontSize: '1.2rem' }}>🔍</span>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          placeholder={t('search.placeholder')}
+          style={{
+            width: '100%', padding: '14px 16px 14px 44px',
+            borderRadius: 50, border: '1px solid rgba(255,255,255,.15)',
+            background: 'rgba(255,255,255,.07)', color: '#f0f4ff',
+            fontSize: '1rem', outline: 'none',
+          }}
+        />
+      </div>
     </div>
   );
 }

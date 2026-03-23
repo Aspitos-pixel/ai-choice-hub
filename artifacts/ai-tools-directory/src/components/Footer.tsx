@@ -1,19 +1,16 @@
-import { useLanguage } from "@/context/LanguageContext";
-import { Sparkles } from "lucide-react";
+import { useLanguage } from '@/context/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-border mt-24 bg-card/50 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center justify-center text-center">
-        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-          <Sparkles className="w-5 h-5 text-primary" />
-        </div>
-        <p className="text-muted-foreground text-sm font-medium">
-          {t("footer.copyright")}
-        </p>
-      </div>
+    <footer style={{ padding: '3rem 0 2rem', borderTop: '1px solid rgba(255,255,255,.1)', textAlign: 'center', color: '#b8bfd9', marginTop: '4rem' }}>
+      <p>{t('footer.copy')}</p>
+      <nav style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
+        <a href="/privacy.html" style={{ color: '#b8bfd9', margin: '0 1rem', textDecoration: 'none' }}>{t('footer.privacy')}</a>
+        <a href="/legal.html" style={{ color: '#b8bfd9', margin: '0 1rem', textDecoration: 'none' }}>{t('footer.legal')}</a>
+        <a href="/contact.html" style={{ color: '#b8bfd9', margin: '0 1rem', textDecoration: 'none' }}>{t('footer.contact')}</a>
+      </nav>
     </footer>
   );
 }

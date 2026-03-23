@@ -10,47 +10,69 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   en: {
-    'nav.title': 'AI Tools Directory',
-    'nav.toggle': 'ES',
-    'hero.badge': 'Constantly Updated',
-    'hero.title': 'Discover the Best AI Tools',
-    'hero.subtitle': 'A curated directory of artificial intelligence software to supercharge your workflow, creativity, and productivity.',
-    'search.placeholder': 'Search tools by name or description...',
-    'filter.all': 'All Categories',
-    'card.visit': 'Visit Tool',
-    'footer.copyright': '© 2025 AI Tools Directory. Built for the future.',
-    'empty.title': 'No tools found',
-    'empty.subtitle': 'Try adjusting your search or filters to find what you are looking for.',
-    // Categories
-    'cat.chat': 'Chat',
-    'cat.writing': 'Writing',
-    'cat.image': 'Image',
+    'nav.logo': '🤖 AI Choice Hub',
+    'hero.title': 'Best AI Tools\nfor Every Task',
+    'hero.subtitle': 'Find the perfect AI for writing, coding, images, video, design, voice & automation. Direct links to official sites with expert comparisons.',
+    'hero.cta': 'Explore All Tools',
+    'section.title': 'AI Tools by Category',
+    'card.visit': '→ Visit',
+    'filter.all': 'All',
+    'search.placeholder': 'Search tools...',
+    'comparison.title': 'Quick Comparison',
+    'comparison.task': 'Task',
+    'comparison.best': 'Best Choice',
+    'comparison.alt': 'Alternative',
+    'comparison.pro': 'Pro Option',
+    'comparison.writing': 'Writing',
+    'comparison.coding': 'Coding',
+    'comparison.images': 'Images',
+    'comparison.video': 'Video',
+    'comparison.design': 'Design',
+    'comparison.voice': 'Voice',
+    'footer.copy': '© 2026 AI Choice Hub. Curated by AI experts for AI users.',
+    'footer.privacy': 'Privacy',
+    'footer.legal': 'Legal',
+    'footer.contact': 'Contact',
+    'cat.writing': 'Writing & Chat',
+    'cat.coding': 'Coding',
+    'cat.images': 'Images',
     'cat.video': 'Video',
-    'cat.audio': 'Audio',
-    'cat.code': 'Code',
-    'cat.productivity': 'Productivity',
+    'cat.design': 'Design',
+    'cat.voice': 'Voice',
+    'cat.automation': 'Automation',
     'cat.research': 'Research',
   },
   es: {
-    'nav.title': 'Directorio de IA',
-    'nav.toggle': 'EN',
-    'hero.badge': 'Actualizado Constantemente',
-    'hero.title': 'Descubre las Mejores Herramientas de IA',
-    'hero.subtitle': 'Un directorio curado de software de inteligencia artificial para potenciar tu flujo de trabajo, creatividad y productividad.',
-    'search.placeholder': 'Buscar por nombre o descripción...',
-    'filter.all': 'Todas las Categorías',
-    'card.visit': 'Visitar',
-    'footer.copyright': '© 2025 Directorio de Herramientas IA. Construido para el futuro.',
-    'empty.title': 'No se encontraron herramientas',
-    'empty.subtitle': 'Intenta ajustar tu búsqueda o filtros para encontrar lo que buscas.',
-    // Categories
-    'cat.chat': 'Chat',
-    'cat.writing': 'Escritura',
-    'cat.image': 'Imagen',
+    'nav.logo': '🤖 AI Choice Hub',
+    'hero.title': 'Las Mejores\nHerramientas de IA',
+    'hero.subtitle': 'Encuentra la IA perfecta para escritura, código, imágenes, video, diseño, voz y automatización. Links directos a sitios oficiales con comparaciones expertas.',
+    'hero.cta': 'Explorar Herramientas',
+    'section.title': 'Herramientas de IA por Categoría',
+    'card.visit': '→ Visitar',
+    'filter.all': 'Todas',
+    'search.placeholder': 'Buscar herramientas...',
+    'comparison.title': 'Comparación Rápida',
+    'comparison.task': 'Tarea',
+    'comparison.best': 'Mejor Opción',
+    'comparison.alt': 'Alternativa',
+    'comparison.pro': 'Opción Pro',
+    'comparison.writing': 'Escritura',
+    'comparison.coding': 'Código',
+    'comparison.images': 'Imágenes',
+    'comparison.video': 'Video',
+    'comparison.design': 'Diseño',
+    'comparison.voice': 'Voz',
+    'footer.copy': '© 2026 AI Choice Hub. Curado por expertos en IA para usuarios de IA.',
+    'footer.privacy': 'Privacidad',
+    'footer.legal': 'Legal',
+    'footer.contact': 'Contacto',
+    'cat.writing': 'Escritura y Chat',
+    'cat.coding': 'Código',
+    'cat.images': 'Imágenes',
     'cat.video': 'Video',
-    'cat.audio': 'Audio',
-    'cat.code': 'Código',
-    'cat.productivity': 'Productividad',
+    'cat.design': 'Diseño',
+    'cat.voice': 'Voz',
+    'cat.automation': 'Automatización',
     'cat.research': 'Investigación',
   }
 };
@@ -60,9 +82,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  const t = (key: string): string => {
-    return translations[language][key] || key;
-  };
+  const t = (key: string): string => translations[language][key] ?? key;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
@@ -73,8 +93,6 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
+  if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
   return context;
 };
