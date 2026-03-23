@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For fluid layout animations and staggered card reveals"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes"
+
+images:
+  - path: "artifacts/ai-tools-directory/public/images/hero-bg.png"
+    description: "Abstract modern gradient mesh in vibrant indigo, violet, and soft teal, smooth fluid shapes, premium minimal aesthetic, dark atmospheric feel"
+    aspect_ratio: "16:9"
+
+notes:
+  - All data is hardcoded in the frontend.
+  - Translation is handled via React Context.
