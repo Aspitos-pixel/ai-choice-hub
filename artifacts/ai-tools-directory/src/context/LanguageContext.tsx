@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   en: {
-    'nav.logo': ' AI Choice Hub',
+    'nav.logo': 'AI Choice Hub',
     'hero.title': 'Best AI Tools\nfor Every Task',
     'hero.subtitle': 'Find the perfect AI for writing, coding, images, video, design, voice & automation. Direct links to official sites with expert comparisons.',
     'hero.cta': 'Explore All Tools',
@@ -43,7 +43,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cat.research': 'Research',
   },
   es: {
-    'nav.logo': ' AI Choice Hub',
+    'nav.logo': 'AI Choice Hub',
     'hero.title': 'Las Mejores\nHerramientas de IA',
     'hero.subtitle': 'Encuentra la IA perfecta para escritura, código, imágenes, video, diseño, voz y automatización. Links directos a sitios oficiales con comparaciones expertas.',
     'hero.cta': 'Explorar Herramientas',

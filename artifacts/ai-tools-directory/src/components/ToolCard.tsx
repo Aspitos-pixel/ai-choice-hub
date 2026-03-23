@@ -36,7 +36,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
         marginBottom: '0.75rem',
         alignSelf: 'flex-start',
       }}>
-        {tool.emoji} {tool.categoryId.charAt(0).toUpperCase() + tool.categoryId.slice(1)}
+        {tool.categoryId.charAt(0).toUpperCase() + tool.categoryId.slice(1)}
       </span>
       <h3 style={{ fontSize: '1.4rem', margin: '.25rem 0 1rem', color: 'white', fontWeight: 700 }}>
         {tool.name}
