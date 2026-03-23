@@ -23,7 +23,9 @@ export function CategoryFilter({ selectedCategory, setSelectedCategory }: Catego
   });
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: '2.5rem' }}>
+    <div
+      style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: '2.5rem' }}
+      className="text-center">
       <button style={pillStyle(selectedCategory === 'all')} onClick={() => setSelectedCategory('all')}>
         {t('filter.all')}
       </button>
