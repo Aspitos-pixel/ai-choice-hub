@@ -4,6 +4,7 @@ export interface Tool {
   id: string;
   name: string;
   url: string;
+  logoUrl: string;
   categoryId: CategoryId;
   categoryColor: { bg: string; text: string };
   description: { en: string; es: string };
@@ -32,9 +33,12 @@ export const CATEGORIES: { id: CategoryId; labelKey: string }[] = [
   { id: 'research',   labelKey: 'cat.research'   },
 ];
 
+const logo = (domain: string) => `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+
 export const TOOLS: Tool[] = [
   {
     id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/',
+    logoUrl: logo('openai.com'),
     categoryId: 'writing', categoryColor: COLORS.writing,
     description: {
       en: 'Best for versatile writing, brainstorming, code assistance and content creation.',
@@ -44,6 +48,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'claude', name: 'Claude', url: 'https://claude.ai/',
+    logoUrl: logo('anthropic.com'),
     categoryId: 'writing', categoryColor: COLORS.writing,
     description: {
       en: 'Perfect for long-form writing, analysis and complex reasoning tasks.',
@@ -53,6 +58,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/',
+    logoUrl: logo('google.com'),
     categoryId: 'research', categoryColor: COLORS.research,
     description: {
       en: "Google's most capable multimodal AI for research, writing and complex tasks.",
@@ -62,6 +68,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'copilot', name: 'GitHub Copilot', url: 'https://github.com/features/copilot',
+    logoUrl: logo('github.com'),
     categoryId: 'coding', categoryColor: COLORS.coding,
     description: {
       en: 'Best AI coding assistant integrated in your IDE for real-time code completion.',
@@ -71,6 +78,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'cursor', name: 'Cursor', url: 'https://cursor.sh/',
+    logoUrl: logo('cursor.com'),
     categoryId: 'coding', categoryColor: COLORS.coding,
     description: {
       en: 'AI-first code editor built for pair programming with advanced AI models.',
@@ -80,6 +88,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'midjourney', name: 'Midjourney', url: 'https://www.midjourney.com/',
+    logoUrl: logo('midjourney.com'),
     categoryId: 'images', categoryColor: COLORS.images,
     description: {
       en: 'Leading AI for artistic images, concepts and creative visuals via Discord.',
@@ -89,6 +98,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'dalle', name: 'DALL-E 3', url: 'https://openai.com/dall-e-3',
+    logoUrl: logo('openai.com'),
     categoryId: 'images', categoryColor: COLORS.images,
     description: {
       en: 'Excellent for precise image generation from detailed text prompts by OpenAI.',
@@ -98,6 +108,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'firefly', name: 'Adobe Firefly', url: 'https://firefly.adobe.com/',
+    logoUrl: logo('adobe.com'),
     categoryId: 'images', categoryColor: COLORS.images,
     description: {
       en: 'Creative generative AI models by Adobe, designed safe for commercial use.',
@@ -107,6 +118,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'synthesia', name: 'Synthesia', url: 'https://www.synthesia.io/',
+    logoUrl: logo('synthesia.io'),
     categoryId: 'video', categoryColor: COLORS.video,
     description: {
       en: 'Create professional avatar videos from text in 120+ languages.',
@@ -116,6 +128,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'runway', name: 'Runway', url: 'https://runwayml.com/',
+    logoUrl: logo('runwayml.com'),
     categoryId: 'video', categoryColor: COLORS.video,
     description: {
       en: 'Advancing creativity with AI. Offers generative video models and editing tools.',
@@ -125,6 +138,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'canva', name: 'Canva Magic Studio', url: 'https://www.canva.com/magic/',
+    logoUrl: logo('canva.com'),
     categoryId: 'design', categoryColor: COLORS.design,
     description: {
       en: 'AI-powered design tools for presentations, social media and marketing materials.',
@@ -134,6 +148,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'figma-ai', name: 'Figma AI', url: 'https://www.figma.com/ai/',
+    logoUrl: logo('figma.com'),
     categoryId: 'design', categoryColor: COLORS.design,
     description: {
       en: 'AI features built into Figma to help you design faster and more creatively.',
@@ -143,6 +158,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'elevenlabs', name: 'ElevenLabs', url: 'https://elevenlabs.io/',
+    logoUrl: logo('elevenlabs.io'),
     categoryId: 'voice', categoryColor: COLORS.voice,
     description: {
       en: 'Most realistic AI voice generation for voiceovers, dubbing and text-to-speech.',
@@ -152,6 +168,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'murf', name: 'Murf AI', url: 'https://murf.ai/',
+    logoUrl: logo('murf.ai'),
     categoryId: 'voice', categoryColor: COLORS.voice,
     description: {
       en: 'Studio-quality AI voices for videos, podcasts, and professional presentations.',
@@ -161,6 +178,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'zapier', name: 'Zapier AI', url: 'https://zapier.com/ai',
+    logoUrl: logo('zapier.com'),
     categoryId: 'automation', categoryColor: COLORS.automation,
     description: {
       en: 'AI-powered no-code automation connecting 6000+ apps and services.',
@@ -170,6 +188,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/',
+    logoUrl: logo('perplexity.ai'),
     categoryId: 'research', categoryColor: COLORS.research,
     description: {
       en: 'AI-powered search engine providing conversational answers with cited sources.',
@@ -179,6 +198,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'jasper', name: 'Jasper', url: 'https://www.jasper.ai/',
+    logoUrl: logo('jasper.ai'),
     categoryId: 'writing', categoryColor: COLORS.writing,
     description: {
       en: 'Generative AI platform for business that helps creators produce marketing content fast.',
@@ -188,6 +208,7 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'grammarly', name: 'Grammarly AI', url: 'https://www.grammarly.com/',
+    logoUrl: logo('grammarly.com'),
     categoryId: 'writing', categoryColor: COLORS.writing,
     description: {
       en: 'AI writing assistance to help you communicate clearly, confidently, and effectively.',
