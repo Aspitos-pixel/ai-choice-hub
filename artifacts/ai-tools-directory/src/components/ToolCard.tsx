@@ -29,46 +29,43 @@ export function ToolCard({ tool }: { tool: Tool }) {
         (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.25rem', gap: '.6rem' }}>
         <div style={{
-          width: 52, height: 52, borderRadius: 12, overflow: 'hidden', flexShrink: 0,
+          width: 60, height: 60, borderRadius: 14, overflow: 'hidden', flexShrink: 0,
           background: 'rgba(255,255,255,.08)', display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
           {!imgError ? (
             <img
               src={tool.logoUrl}
               alt={`${tool.name} logo`}
-              width={52}
-              height={52}
-              style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 6 }}
+              width={60}
+              height={60}
+              style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 8 }}
               onError={() => setImgError(true)}
             />
           ) : (
-            <span style={{ fontSize: '1.1rem', fontWeight: 700, color: tool.categoryColor.text }}>
+            <span style={{ fontSize: '1.2rem', fontWeight: 700, color: tool.categoryColor.text }}>
               {initials}
             </span>
           )}
         </div>
-        <div>
-          <h3 style={{ fontSize: '1.2rem', color: 'white', fontWeight: 700, margin: 0 }}>
-            {tool.name}
-          </h3>
-          <span style={{
-            display: 'inline-block',
-            background: tool.categoryColor.bg,
-            color: tool.categoryColor.text,
-            padding: '2px 10px',
-            borderRadius: 20,
-            fontSize: '.78rem',
-            fontWeight: 600,
-            marginTop: 4,
-          }}>
-            {tool.categoryId.charAt(0).toUpperCase() + tool.categoryId.slice(1)}
-          </span>
-        </div>
+        <h3 style={{ fontSize: '1.2rem', color: 'white', fontWeight: 700, margin: 0, textAlign: 'center' }}>
+          {tool.name}
+        </h3>
+        <span style={{
+          display: 'inline-block',
+          background: tool.categoryColor.bg,
+          color: tool.categoryColor.text,
+          padding: '2px 12px',
+          borderRadius: 20,
+          fontSize: '.78rem',
+          fontWeight: 600,
+        }}>
+          {tool.categoryId.charAt(0).toUpperCase() + tool.categoryId.slice(1)}
+        </span>
       </div>
 
-      <p style={{ color: '#b8bfd9', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.6, fontSize: '.95rem' }}>
+      <p style={{ color: '#b8bfd9', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.6, fontSize: '.95rem', textAlign: 'center' }}>
         {tool.description[language]}
       </p>
 
@@ -79,6 +76,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
         style={{
           display: 'inline-flex',
           alignItems: 'center',
+          justifyContent: 'center',
           gap: '.5rem',
           padding: '11px 20px',
           background: '#10b981',
@@ -87,7 +85,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
           textDecoration: 'none',
           fontWeight: 600,
           fontSize: '.9rem',
-          alignSelf: 'flex-start',
+          alignSelf: 'center',
         }}
       >
         {tool.visitLabel[language]}
