@@ -56,7 +56,7 @@ export function Home() {
             ))}
             {filteredTools.length === 0 && (
               <div style={{ gridColumn: '1/-1', textAlign: 'center', color: '#b8bfd9', padding: '4rem 0', fontSize: '1.1rem' }}>
-                No tools match your search.
+                {t('no.results')}
               </div>
             )}
           </div>

@@ -3,7 +3,7 @@ import { Tool } from '@/data/tools';
 import { useLanguage } from '@/context/LanguageContext';
 
 export function ToolCard({ tool }: { tool: Tool }) {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [imgError, setImgError] = useState(false);
 
   const initials = tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
@@ -61,7 +61,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
           fontSize: '.78rem',
           fontWeight: 600,
         }}>
-          {tool.categoryId.charAt(0).toUpperCase() + tool.categoryId.slice(1)}
+          {t('cat.' + tool.categoryId)}
         </span>
       </div>
 
